@@ -17,7 +17,7 @@
 <br>
 
 <c:forEach var="hotel" items="${hotelList}">
-<table>
+<table border="1">
 	<tr>
 		<td>名前：</td>
 		<td><c:out value="${hotel.hotelName}"/></td>
