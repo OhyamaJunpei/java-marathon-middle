@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/team/index" method="post">
+<form action="${pageContext.request.contextPath}/team/index" method="post">
 球団名<br>
 <c:out value="${team.teamName}"/><br>
 本拠地<br>
