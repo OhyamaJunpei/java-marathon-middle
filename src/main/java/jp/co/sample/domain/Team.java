@@ -16,7 +16,7 @@ public class Team {
 	/** チーム名 */
 	private String teamName;
 	/** 本拠地名 */
-	private String headquaters;
+	private String headquarters;
 	/** 設立日 */
 	private String inauguration;
 	/** 歴史 */
@@ -41,11 +41,11 @@ public class Team {
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
 	}
-	public String getHeadquaters() {
-		return headquaters;
+	public String getHeadquarters() {
+		return headquarters;
 	}
-	public void setHeadquaters(String headquaters) {
-		this.headquaters = headquaters;
+	public void setHeadquarters(String headquarters) {
+		this.headquarters = headquarters;
 	}
 	public String getInauguration() {
 		return inauguration;

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import jp.co.sample.domain.Team;
 
 /**
- * リポジトリ.
+ * 全件検索、主キー検索を行うメソッドを入れたリポジトリ.
  * 
  * @author junpei.oyama
  *
@@ -30,7 +30,7 @@ public class TeamRepository {
 		team.setId(rs.getInt("id"));
 		team.setLeagueName(rs.getString("league_name"));
 		team.setTeamName(rs.getString("team_name"));
-		team.setHeadquaters(rs.getString("headquaters"));
+		team.setHeadquarters(rs.getString("headquarters"));
 		team.setInauguration(rs.getString("inauguration"));
 		team.setHistory(rs.getString("history"));
 		return team;
@@ -42,7 +42,7 @@ public class TeamRepository {
 	 */
 	public List<Team> findAll() {
 		List<Team> teams = template.query(
-				"SELECT id, league_name, team_name, headquaters, inauguration, history FROM baseball_teams ORDER BY id",
+				"SELECT id, league_name, team_name, headquarters, inauguration, history FROM baseball_teams ORDER BY id",
 				TEAM_ROW_MAPPER);
 		return teams;
 	}
@@ -56,7 +56,7 @@ public class TeamRepository {
 	 */
 	public Team load(Integer id) {
 		
-		String sql = "SELECT id, league_name, team_name, headquaters, inauguration, history FROM baseball_teams WHERE id=:id";
+		String sql = "SELECT id, league_name, team_name, headquarters, inauguration, history FROM baseball_teams WHERE id=:id";
 		
 		SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
 		
