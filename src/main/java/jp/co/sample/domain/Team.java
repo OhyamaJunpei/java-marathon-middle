@@ -12,9 +12,9 @@ public class Team {
 	/** id */
 	private Integer id;
 	/** リーグ名 */
-	private String league_name;
+	private String leagueName;
 	/** チーム名 */
-	private String team_name;
+	private String teamName;
 	/** 本拠地名 */
 	private String headquaters;
 	/** 設立日 */
@@ -29,17 +29,17 @@ public class Team {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getLeague_name() {
-		return league_name;
+	public String getLeagueName() {
+		return leagueName;
 	}
-	public void setLeague_name(String league_name) {
-		this.league_name = league_name;
+	public void setLeagueName(String leagueName) {
+		this.leagueName = leagueName;
 	}
-	public String getTeam_name() {
-		return team_name;
+	public String getTeamName() {
+		return teamName;
 	}
-	public void setTeam_name(String team_name) {
-		this.team_name = team_name;
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
 	}
 	public String getHeadquaters() {
 		return headquaters;
