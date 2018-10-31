@@ -17,9 +17,20 @@
 <br>
 
 <c:forEach var="hotel" items="${hotelList}">
-  名前：<c:out value="${hotel.hotelName}"/> <br>
- 最寄り駅： <c:out value="${hotel.nearestStation}"/> <br>
- 価格： <c:out value="${hotel.price}"/> <br>  
+<table>
+	<tr>
+		<td>名前：</td>
+		<td><c:out value="${hotel.hotelName}"/></td>
+  	</tr>
+  	<tr>
+  		<td>最寄り駅：</td>
+  		<td><c:out value="${hotel.nearestStation}"/></td>
+ 	</tr>
+ 	<tr>
+ 		<td>価格：</td>
+ 		<td><c:out value="${hotel.price}"/></td>
+ 	</tr>
+ </table>  
 </c:forEach>
 
 
