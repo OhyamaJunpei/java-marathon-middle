@@ -24,7 +24,7 @@ public class HotelController {
 	private HotelRepository repository;
 	
 	/**
-	 * 入力画面を表示
+	 * 入力画面を表示.
 	 * 
 	 * @return　入力画面
 	 */
@@ -33,6 +33,13 @@ public class HotelController {
 		return "hotelIndex";
 	}
 	
+	/**
+	 * 出力画面を表示.
+	 * 
+	 * @param price 価格
+	 * @param model　モデル
+	 * @return　出力画面
+	 */
 	@RequestMapping("/result")
 	public String result(Integer price, Model model) {
 		
