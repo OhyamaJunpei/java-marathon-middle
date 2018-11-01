@@ -48,7 +48,7 @@ public class ClothesController {
 	}
 	
 //	@RequestMapping("/search")
-//	public String search(ClothesForm form, RedirectAttributes redirectAttributes) {
+//	public String search(ClothesForm form, Model model) {
 //		
 //		Clothes clothes = new Clothes();
 //		

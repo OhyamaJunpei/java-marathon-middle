@@ -2,12 +2,15 @@ package jp.co.sample.controller;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jp.co.sample.domain.Hotel;
+import jp.co.sample.form.HotelForm;
 import jp.co.sample.repository.HotelRepository;
 
 /**
@@ -22,6 +25,16 @@ public class HotelController {
 	
 	@Autowired
 	private HotelRepository repository;
+	
+	/**
+	 * springのformタグを使うためのメソッド.
+	 * 
+	 * @return インスタンス化されたHotelForm
+	 */
+	@ModelAttribute
+	public HotelForm setUpForm() {
+		return new HotelForm();
+	}
 	
 	/**
 	 * 入力画面を表示.
@@ -40,14 +53,17 @@ public class HotelController {
 	 * @param model　モデル
 	 * @return　出力画面
 	 */
-	@RequestMapping("/result")
-	public String result(Integer price, Model model) {
+	@RequestMapping("/search")
+	public String search(HotelForm form, Model model) {
 		
-		List<Hotel> hotelList = repository.findByPrice(price);
+		Hotel hotel = new Hotel();
+	    BeanUtils.copyProperties(form, hotel);
+	    
+	    List<Hotel> hotelList = repository.findByLessThanPrice(hotel.getPrice());
+	    
+	    model.addAttribute("hotelList", hotelList);
 		
-		model.addAttribute(hotelList);
-		
-		return "hotelResult";
+		return "hotelIndex";
 	}
 	
 }

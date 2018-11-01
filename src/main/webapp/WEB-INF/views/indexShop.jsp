@@ -8,16 +8,21 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<h1>洋服ショップ</h1>
+
 <form:form modelAttribute="clothesForm" action="${pageContext.request.contextPath}/clothes/search">
 
 <form:radiobutton path="gender" label="Man" value="0"/><br>
 <form:radiobutton path="gender" label="Woman" value="1"/>
-
 
 <form:select path="color" items="${colorMap}" />
 
 <input type="submit" value="検索">
 
 </form:form>
+
+<!-- 検索結果 -->
+
 </body>
 </html>
