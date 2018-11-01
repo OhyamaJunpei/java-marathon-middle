@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/team/index" method="post">
 球団名<br>
 <c:out value="${team.teamName}"/><br>
 本拠地<br>
@@ -18,6 +17,7 @@
 <pre><c:out value="${team.history}"/></pre><br>
 
 
+<form action="${pageContext.request.contextPath}/team/index" method="post">
 <input type="submit" value="戻る">
 </form>
 </body>

@@ -10,7 +10,7 @@
 プロ野球セントラル・リーグ一覧<br>
 
 <c:forEach var="team" items="${teamList}">
-  <a href="/team/detail/?id=${team.id}">
+  <a href="/team/detail/?id=<c:out value="${team.id}"/>">
   <c:out value="${team.teamName}"/> <br>
   </a>
 </c:forEach>

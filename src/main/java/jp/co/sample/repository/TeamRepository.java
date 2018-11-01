@@ -48,7 +48,7 @@ public class TeamRepository {
 	}
 	
 	/**
-	 * 主キー検索を行うload()メソッドを定義
+	 * 主キー検索を行うload()メソッドを定義.
 	 * 
 	 * @param id Teamのid
 	 * @return 検索されたteam
