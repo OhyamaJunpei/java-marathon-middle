@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/hotel/result">
+<form action="/hotel/result" method="post">
 
 ホテル検索<br>
 
